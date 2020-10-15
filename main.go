@@ -16,6 +16,7 @@ func main() {
 	if len(inputs) <= 1 {
 		inputs = strings.Split(s, `\n`)
 	}
+	fmt.Println(inputs)
 	var output int = 0
 	for h := 1; h < len(inputs); h++ {
 		numericValue, _ := strconv.Atoi(inputs[h])
