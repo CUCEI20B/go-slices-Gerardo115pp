@@ -13,10 +13,13 @@ func main() {
 	scanner.Scan()
 	s := scanner.Text()
 	inputs := strings.Split(s, `\r\n`)
+	if len(inputs) <= 1 {
+		inputs = strings.Split(s, `\n`)
+	}
 	var output int = 0
 	for h := 1; h < len(inputs); h++ {
 		numericValue, _ := strconv.Atoi(inputs[h])
 		output += numericValue
 	}
-	fmt.Println(output)
+	fmt.Printf("%d", output)
 }
